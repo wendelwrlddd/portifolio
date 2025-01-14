@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url(_fontes.scss);
+@import url(_header.scss);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 50px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+header p {
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+header h2 {
+  font-family: "Roboto", sans-serif;
+  padding: 30px;
+}
+header .hd {
+  width: 40%;
+}
+header img {
+  width: 550px;
+}
+
+h2 {
+  margin: 15px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 30px;
+}
+
+.bx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.bx .bb {
+  height: 200px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bx .ht {
+  margin-top: 1px;
+  text-align: center;
+  padding: 20px;
+}
+.bx .icons {
+  width: 40px;
+}
+.bx p {
+  text-align: center;
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+}
+.bx i {
+  align-items: center;
+  margin: 15px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  padding: 30px;
+}
+
+main .cont {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+main .cont .bb {
+  height: 200px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px, rgba(0, 0, 0, 0.2) 15px 15px, rgba(0, 0, 0, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .cont .bb p {
+  text-align: center;
+  text-indent: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100px; /* Define a altura do footer */
+  background-color: #050202; /* Cor de fundo do footer (opcional) */
+  color: white;
+  margin-top: 50px;
+}
+
+.glow-on-hover {
+  margin: 20px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.menu {
+  position: fixed; /* Deixa o menu fixo */
+  top: 0; /* Fixa o menu no topo */
+  left: 0; /* Fixa o menu à esquerda */
+  width: 100%; /* Faz o menu ocupar toda a largura */
+  background-color: #000000; /* Cor de fundo do menu */
+  z-index: 1000; /* Garante que o menu fique acima dos outros elementos */
+  padding: 10px 0; /* Padding para o menu */
+}
+
+.menu ul {
+  list-style-type: none; /* Remove os bullets */
+  margin: 0; /* Remove a margem */
+  padding: 0; /* Remove o padding */
+  text-align: center; /* Alinha os itens no centro */
+}
+
+.menu-item {
+  display: inline-block; /* Coloca os itens na mesma linha */
+  padding: 10px 20px; /* Espaçamento interno dos itens */
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.menu-item:hover {
+  background-color: #000000; /* Cor de fundo ao passar o mouse */
+}/*# sourceMappingURL=index.css.map */
